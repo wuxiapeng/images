@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@android:color/transparent" />
-    <size android:width="0dp" android:height="0dp" /> <!-- 0像素，不占空间 -->
-</shape>
