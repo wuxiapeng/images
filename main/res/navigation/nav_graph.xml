@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <!-- 首页 Fragment -->
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.wu.tiktok2.ui.home.HomeFragment"
+        android:label="Home" />
+
+    <!-- 个人中心 Fragment (其他 Fragment 类似，先复用这个占位) -->
+    <fragment
+        android:id="@+id/navigation_friend"
+        android:name="com.wu.tiktok2.ui.friend.FriendFragment"
+        android:label="Friend" />
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.wu.tiktok2.ui.add.AddFragment"
+        android:label="Add">
+        <action
+            android:id="@+id/action_add_to_publish"
+            app:destination="@id/publishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.wu.tiktok2.ui.message.MessageFragment"
+        android:label="Message" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.wu.tiktok2.ui.profile.ProfileFragment"
+        android:label="Profile">
+        <action
+            android:id="@+id/action_profile_to_detail"
+            app:destination="@id/videoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoDetailFragment"
+        android:name="com.wu.tiktok2.ui.profile.VideoDetailFragment"
+        android:label="Detail" />
+    <fragment
+        android:id="@+id/publishFragment"
+        android:name="com.wu.tiktok2.ui.add.PublishFragment"
+        android:label="Publish" >
+        <!-- 接收参数 -->
+        <argument
+            android:name="video_uri"
+            app:argType="string" />
+    </fragment>
+</navigation>

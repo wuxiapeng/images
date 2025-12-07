@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!--
+      pathData 解释：
+      M3,9 L3,3 L9,3   -> 左上角 (移动到x3,y9 -> 画线到x3,y3 -> 画线到x9,y3)
+      M15,3 L21,3 L21,9 -> 右上角
+      M21,15 L21,21 L15,21 -> 右下角
+      M9,21 L3,21 L3,15  -> 左下角
+    -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2"
+        android:strokeLineCap="square"
+        android:strokeLineJoin="miter"
+        android:pathData="M3,9 L3,3 L9,3
+                          M15,3 L21,3 L21,9
+                          M21,15 L21,21 L15,21
+                          M9,21 L3,21 L3,15" />
+</vector>
